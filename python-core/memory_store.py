@@ -46,7 +46,8 @@ def add_confession(post):
 
     existing_post_index = next((i for i, p in enumerate(data) if p["id"] == post["id"]), None)
 
-    combined_text = post["title"] + " " + post["body"]
+    comments_text = " ".join(post.get("comments", []))
+    combined_text = f"{post['title']} {post['body']} {comments_text}"
     post["clean_text"] = clean_text(combined_text)
     if existing_post_index is not None:
         data[existing_post_index] = post
