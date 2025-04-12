@@ -8,5 +8,122 @@
       "Glad you got that off your chest."
     ],
     "clean_text": "never told anyone ... younger used steal candy cousin ’ bag"
+  },
+  {
+    "id": "m01",
+    "title": "Secret Toy Swap",
+    "body": "I stole my brother's toy when I was 6 and blamed the dog.",
+    "comments": [
+      "Classic sibling move!",
+      "Poor dog took the fall.",
+      "I used to do stuff like this too!",
+      "At least you remember it now!",
+      "Dogs are too innocent for our childhood crimes."
+    ],
+    "clean_text": "stole brother toy blamed dog"
+  },
+  {
+    "id": "m02",
+    "title": "Snack Money",
+    "body": "Used to sneak coins from my mom’s purse to buy chips after school.",
+    "comments": [
+      "Same here! Chips were worth it though.",
+      "Guilt hits different when you're older.",
+      "Oof, I feel this deep in my core.",
+      "We all had our little rebellious moments.",
+      "Hope you paid her back someday!"
+    ],
+    "clean_text": "sneak coins mom purse buy chips school"
+  },
+  {
+    "id": "m03",
+    "title": "Pencil Theft",
+    "body": "I once stole a pencil from my classmate and kept it like a trophy.",
+    "comments": [
+      "That pencil must've been something special!",
+      "Funny how we remember these tiny moments.",
+      "Same, I stole an eraser once and felt like a criminal.",
+      "School supplies were high-stakes trading goods.",
+      "Did you ever give it back?"
+    ],
+    "clean_text": "stole pencil classmate kept trophy"
+  },
+  {
+    "id": "m04",
+    "title": "Mini Shoplift",
+    "body": "I pocketed a small toy from a store when I was 5 — no one noticed.",
+    "comments": [
+      "I remember doing something like this once.",
+      "Childhood mischief hits hard now.",
+      "Brave little you!",
+      "Stores should be proud they survived our mini crimes.",
+      "Did your parents ever find out?"
+    ],
+    "clean_text": "pocketed small toy store 5 noticed"
+  },
+  {
+    "id": "m05",
+    "title": "Lunchbox Candy",
+    "body": "I stole chocolates from my friend’s lunchbox for weeks.",
+    "comments": [
+      "Lunchboxes were always treasure chests!",
+      "You were a candy bandit!",
+      "I hope your friend didn’t starve.",
+      "Gotta admit, that’s commitment.",
+      "You were persistent at least!"
+    ],
+    "clean_text": "stole chocolates friend lunchbox weeks"
+  },
+  {
+    "id": "m06",
+    "title": "Shop Confusion",
+    "body": "I thought candy was free and just walked out with it.",
+    "comments": [
+      "Aww, that’s kind of adorable.",
+      "Kids logic is unmatched.",
+      "Innocent theft is still theft 😄",
+      "Did anyone catch you?",
+      "Same thing happened with me at a bakery."
+    ],
+    "clean_text": "thought candy free walked"
+  },
+  {
+    "id": "m07",
+    "title": "Sticker Guilt",
+    "body": "I still feel bad for stealing a sticker from my cousin’s scrapbook.",
+    "comments": [
+      "Scrapbooks were sacred!",
+      "Guilt from childhood stickers is real.",
+      "Hope you gave her a better one later.",
+      "Stickers held power back then!",
+      "That’s a wholesome regret."
+    ],
+    "clean_text": "feel bad stealing sticker cousin scrapbook"
+  },
+  {
+    "id": "m08",
+    "title": "Found Money Lie",
+    "body": "I lied about finding money I actually took from a drawer.",
+    "comments": [
+      "That's such a relatable one.",
+      "You were clever!",
+      "Drawer money was tempting af.",
+      "We all thought we were master criminals.",
+      "Hope the guilt didn’t haunt you too long!"
+    ],
+    "clean_text": "lied finding money took drawer"
+  },
+  {
+    "id": "m09",
+    "title": "Pokémon Theft",
+    "body": "I remember stealing a Pokémon card from a friend’s backpack.",
+    "comments": [
+      "Yo, that’s bold!",
+      "Which card was it tho?",
+      "Hope you felt guilty at least.",
+      "Those cards were sacred property.",
+      "I did this too, and it still bugs me."
+    ],
+    "clean_text": "stealing pokémon card friend backpack"
   }
 ]
