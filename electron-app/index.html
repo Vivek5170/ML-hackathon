@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Confession Chatbot</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Reddit Confession Chatbot</title>
 </head>
 <body>
-  <h1>Ask the Confession Bot</h1>
-  <input id="queryInput" type="text" placeholder="e.g., regret, crush, fear" />
-  <button id="submit">Search</button>
-  <div id="results"></div>
+  <h1>Ask me anything 💬</h1>
+  <input id="query" type="text" placeholder="Type your confession-related query" />
+  <button onclick="ask()">Send</button>
+  <pre id="output"></pre>
+
   <script src="renderer.js"></script>
 </body>
 </html>

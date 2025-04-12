@@ -9,7 +9,7 @@ nltk.download('punkt')
 nltk.download('punkt_tab')
 nltk.download('stopwords')
 
-DATA_FILE = "confessions.json"
+DATA_FILE = "C:/Users/yakka/Desktop/VScode_Files/hackathon/ML-hackathon/confessions.json"
 
 def clean_text(text):
     tokens = word_tokenize(text.lower())

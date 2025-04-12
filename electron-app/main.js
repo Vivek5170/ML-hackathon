@@ -2,9 +2,9 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const { spawn } = require('child_process');
 
-function createWindow () {
+function createWindow() {
   const win = new BrowserWindow({
-    width: 1000,
+    width: 900,
     height: 700,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
@@ -14,17 +14,16 @@ function createWindow () {
   win.loadFile('index.html');
 }
 
-ipcMain.handle('query-message', async (event, query) => {
-  return new Promise((resolve, reject) => {
-    const py = spawn('python', ['python-core/main_bot.py']);
-    py.stdin.write(JSON.stringify({ query }));
-    py.stdin.end();
+app.whenReady().then(createWindow);
 
-    let data = '';
-    py.stdout.on('data', chunk => data += chunk);
-    py.stderr.on('data', err => console.error(err.toString()));
-    py.on('close', () => resolve(JSON.parse(data)));
+// Handle query from frontend
+ipcMain.handle('query', async (event, query) => {
+  return new Promise((resolve, reject) => {
+    const py = spawn('python', ['../python-core/main_bot.py', query]);
+
+    let output = '';
+    py.stdout.on('data', (data) => output += data.toString());
+    py.stderr.on('data', (err) => console.error('stderr:', err.toString()));
+    py.on('close', () => resolve(output.trim()));
   });
 });
-
-app.whenReady().then(createWindow);
