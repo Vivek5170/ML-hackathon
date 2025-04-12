@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Reddit Confession Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Ask me anything 💬</h1>
-  <input id="query" type="text" placeholder="Type your confession-related query" />
-  <button onclick="ask()">Send</button>
-  <pre id="output"></pre>
+  <div class="container">
+    <h1>🤖 Reddit Confession Chatbot</h1>
+    <p class="subtitle">Ask me anything confession-style.</p>
+    <div class="input-group">
+      <input id="query" type="text" placeholder="Type your confession-related query..." />
+      <button onclick="ask()">Send</button>
+    </div>
+    <div id="output" class="results"></div>
+  </div>
 
   <script src="renderer.js"></script>
 </body>

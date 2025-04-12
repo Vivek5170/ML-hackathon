@@ -95,7 +95,7 @@ def generate_response(user_query):
     return response
 
 
-if __name__ == "__main_":
+if __name__ == "__main__":
     import sys
     query = sys.argv[1]
     print(generate_response(query))
