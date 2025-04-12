@@ -25,35 +25,18 @@ def expand_query_with_synonyms(query):
 
 
 def search(query):
-    # Load confessions
+    expanded_query = expand_query_with_synonyms(query)
+
     data = load_confessions()
-
-    # Extract the clean text (already processed) for search comparison
     corpus = [post['clean_text'] for post in data]
-
-    # Initialize TF-IDF Vectorizer
     vectorizer = TfidfVectorizer()
-
-    # Fit and transform the corpus to get the term frequencies
     tfidf_matrix = vectorizer.fit_transform(corpus)
-
-    # Transform the query to the same vector space
-    query_tfidf = vectorizer.transform([query])
-
-    # Compute similarity scores
+    query_tfidf = vectorizer.transform([expanded_query])
     cosine_similarities = (tfidf_matrix * query_tfidf.T).toarray()
+    matched_indexes = cosine_similarities.flatten().argsort()[-5:][::-1]
+    matched_posts = [data[i] for i in matched_indexes if cosine_similarities[i] > 0.01]
 
-    # Find the indexes of the top matching posts (highest cosine similarity)
-    matched_indexes = cosine_similarities.flatten().argsort()[-5:][::-1]  # Top 5 matches
-
-    # Get matched posts
-    matched_posts = [data[i] for i in matched_indexes]
-
-    # Extract related keywords from the query and the matched posts (optional)
-    related_keywords = set(vectorizer.get_feature_names_out())
-    related_keywords = list(related_keywords)
-
-    # Format the result
+    related_keywords = set(expanded_query.split())
     result = {
         "query": query,
         "matches": [
@@ -63,7 +46,7 @@ def search(query):
                 "comments": post["comments"]
             } for post in matched_posts
         ],
-        "related_keywords": related_keywords
+        "related_keywords": list(related_keywords)
     }
 
     return result

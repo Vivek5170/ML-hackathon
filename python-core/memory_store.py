@@ -30,12 +30,10 @@ def save_confessions(data):
 def add_confession(post):
     data = load_confessions()
 
-    # Check for duplicate by ID
     if any(p["id"] == post["id"] for p in data):
         print(f"Confession {post['id']} already exists.")
         data.remove(post['id'])
 
-    # Add cleaned text for search
     combined_text = post["title"] + " " + post["body"]
     post["clean_text"] = clean_text(combined_text)
 
@@ -46,17 +44,14 @@ def add_confession(post):
 def add_confession(post):
     data = load_confessions()
 
-    # Find if a confession with the same ID exists
     existing_post_index = next((i for i, p in enumerate(data) if p["id"] == post["id"]), None)
 
     combined_text = post["title"] + " " + post["body"]
     post["clean_text"] = clean_text(combined_text)
-    # If it exists, replace it
     if existing_post_index is not None:
         data[existing_post_index] = post
         print(f"Replaced confession {post['id']}.")
     else:
-        # Add cleaned text for search
         data.append(post)
         print(f"Added new confession {post['id']}.")
 
