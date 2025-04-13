@@ -4,6 +4,8 @@ This project is a Reddit-style confession search chatbot that uses Natural Langu
 
 Once initialized, the chatbot functions completely offline, making it fast, efficient, and privacy-friendly.
 
+![App UI](https://drive.google.com/uc?export=view&id=1FUllk60rRr-tV-bTy0SgE8T242_i31_r)
+
 ---
 
 ## Features
