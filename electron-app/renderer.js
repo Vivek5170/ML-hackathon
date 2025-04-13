@@ -10,5 +10,6 @@ async function ask() {
 document.getElementById('query').addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     ask();
+  document.getElementById('output').innerText = "Trying to search...";
   }
 });

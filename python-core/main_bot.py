@@ -53,7 +53,6 @@ def convert_pronouns(text):
     return text
 
 def generate_response(user_query):
-    print('Trying to search ')
     result = search(user_query)
     matched = result.get("matches", [])
     if not matched:
